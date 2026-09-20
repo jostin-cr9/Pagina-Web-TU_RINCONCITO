@@ -54,6 +54,7 @@
         <li class="nav-item"><a class="nav-link" href="#catalogo">Productos</a></li>
         <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li></li>
       </ul>
 
        <div class="d-flex align-items-center gap-2">
@@ -738,6 +739,409 @@
         </div>
     </div>
 </div>
+<!-- REGISTRAR USUARIO -->
+<!-- ===================================================== -->
+<!-- MODAL INICIAR SESIÓN -->
+<!-- ===================================================== -->
+
+<div class="modal fade" id="modalLoginCliente" tabindex="-1"
+     aria-labelledby="modalLoginClienteLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title fw-bold" id="modalLoginClienteLabel">
+          Iniciar sesión
+        </h5>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar">
+        </button>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <!-- CORREO -->
+          <div class="mb-3">
+
+            <label for="loginCorreo" class="form-label">
+              Correo electrónico
+            </label>
+
+            <input type="email"
+                   class="form-control"
+                   id="loginCorreo"
+                   placeholder="ejemplo@correo.com">
+
+          </div>
+
+          <!-- CONTRASEÑA -->
+          <div class="mb-3">
+
+            <label for="loginPassword" class="form-label">
+              Contraseña
+            </label>
+
+            <input type="password"
+                   class="form-control"
+                   id="loginPassword"
+                   placeholder="Ingresa tu contraseña">
+
+          </div>
+
+          <!-- RECORDAR -->
+          <div class="form-check mb-3">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   id="recordarUsuario">
+
+            <label class="form-check-label" for="recordarUsuario">
+              Recordarme
+            </label>
+
+          </div>
+
+          <!-- BOTÓN -->
+          <div class="d-grid">
+
+            <button type="submit"
+                    class="btn btn-primary">
+              Iniciar sesión
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="modal-footer justify-content-center">
+
+        <small class="text-secondary">
+          ¿No tienes una cuenta?
+        </small>
+
+        <button type="button"
+                class="btn btn-link p-0"
+                data-bs-target="#modalRegistro"
+                data-bs-toggle="modal">
+
+          Registrarse
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- ===================================================== -->
+<!-- MODAL REGISTRAR USUARIO -->
+<!-- ===================================================== -->
+
+<div class="modal fade" id="modalRegistro" tabindex="-1"
+     aria-labelledby="modalRegistroLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title fw-bold" id="modalRegistroLabel">
+          Crear cuenta
+        </h5>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar">
+        </button>
+
+      </div>
+
+      <div class="modal-body">
+
+        <p class="text-secondary mb-4">
+          Regístrate en TU RINCONCITO.
+        </p>
+
+        <form>
+
+          <div class="row g-3">
+
+            <!-- NOMBRE -->
+            <div class="col-12 col-md-6">
+
+              <label for="registroNombre" class="form-label">
+                Nombre
+              </label>
+
+              <input type="text"
+                     class="form-control"
+                     id="registroNombre"
+                     placeholder="Ingresa tu nombre">
+
+            </div>
+
+            <!-- APELLIDO -->
+            <div class="col-12 col-md-6">
+
+              <label for="registroApellido" class="form-label">
+                Apellido
+              </label>
+
+              <input type="text"
+                     class="form-control"
+                     id="registroApellido"
+                     placeholder="Ingresa tu apellido">
+
+            </div>
+
+            <!-- DNI -->
+            <div class="col-12 col-md-6">
+
+              <label for="registroDni" class="form-label">
+                DNI
+              </label>
+
+              <input type="text"
+                     class="form-control"
+                     id="registroDni"
+                     placeholder="Ingresa tu DNI">
+
+            </div>
+
+            <!-- TELÉFONO -->
+            <div class="col-12 col-md-6">
+
+              <label for="registroTelefono" class="form-label">
+                Teléfono
+              </label>
+
+              <input type="tel"
+                     class="form-control"
+                     id="registroTelefono"
+                     placeholder="Ingresa tu teléfono">
+
+            </div>
+
+            <!-- CORREO -->
+            <div class="col-12">
+
+              <label for="registroCorreo" class="form-label">
+                Correo electrónico
+              </label>
+
+              <input type="email"
+                     class="form-control"
+                     id="registroCorreo"
+                     placeholder="ejemplo@correo.com">
+
+            </div>
+
+            <!-- CONTRASEÑA -->
+            <div class="col-12 col-md-6">
+
+              <label for="registroPassword" class="form-label">
+                Contraseña
+              </label>
+
+              <input type="password"
+                     class="form-control"
+                     id="registroPassword"
+                     placeholder="Ingresa una contraseña">
+
+            </div>
+
+            <!-- CONFIRMAR -->
+            <div class="col-12 col-md-6">
+
+              <label for="registroConfirmPassword" class="form-label">
+                Confirmar contraseña
+              </label>
+
+              <input type="password"
+                     class="form-control"
+                     id="registroConfirmPassword"
+                     placeholder="Repite tu contraseña">
+
+            </div>
+
+            <!-- TÉRMINOS -->
+            <div class="col-12">
+
+              <div class="form-check">
+
+                <input class="form-check-input"
+                       type="checkbox"
+                       id="aceptarTerminos">
+
+                <label class="form-check-label"
+                       for="aceptarTerminos">
+
+                  Acepto los términos y condiciones.
+
+                </label>
+
+              </div>
+
+            </div>
+
+            <!-- BOTÓN -->
+            <div class="col-12">
+
+              <div class="d-grid">
+
+                <button type="submit"
+                        class="btn btn-primary">
+
+                  Crear cuenta
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="modal-footer justify-content-center">
+
+        <small class="text-secondary">
+          ¿Ya tienes una cuenta?
+        </small>
+
+        <button type="button"
+                class="btn btn-link p-0"
+                data-bs-target="#modalLoginCliente"
+                data-bs-toggle="modal">
+
+          Iniciar sesión
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!--NOSOTROS-->
+    <section class="container py-5">
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body p-4">
+          <i class="bi bi-basket2 display-5 text-primary"></i>
+          <h5 class="mt-3">Productos</h5>
+          <p class="text-secondary mb-0">
+            Conoce los productos disponibles en la bodega.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body p-4">
+          <i class="bi bi-clock display-5 text-primary"></i>
+          <h5 class="mt-3">Horario de atención</h5>
+          <p class="text-secondary mb-0">
+            Lunes a domingo de 7:00 a. m. a 10:00 p. m.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body p-4">
+          <i class="bi bi-geo-alt display-5 text-primary"></i>
+          <h5 class="mt-3">Ubicación</h5>
+          <p class="text-secondary mb-0">
+            Jr. Las Flores 123, Lima.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-3">
+
+                        <i class="bi bi-bicycle display-5 text-primary"></i>
+
+                        <h6 class="fw-bold mt-3">
+                            Rapidez
+                        </h6>
+
+                        <p class="small text-secondary mb-0">
+                            Encuentra lo que necesitas fácilmente.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-shop display-5 text-primary"></i>
+
+                        <h6 class="fw-bold mt-2">
+                            Confianza
+                        </h6>
+
+                        <p class="small text-secondary mb-0">
+                            Siempre cerca de nuestros clientes.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-5">
+
+                        <i class="bi bi-heart-fill display-5 text-primary"></i>
+
+                        <h6 class="fw-bold mt-2">
+                            Atención
+                        </h6>
+
+                        <p class="small text-secondary mb-0">
+                            Pensamos en nuestros clientes.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+  </div>
+</section>
+
+
+
+
+
 <!--PARA EL CARRITO-->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
   <div class="offcanvas-header">
@@ -774,7 +1178,6 @@
 
 
 
-      
 
 
 
@@ -805,7 +1208,15 @@
 
 
 
-</section> 
+
+
+
+
+
+
+
+
+
 
  <script>
   // ===============================
@@ -891,7 +1302,5 @@ botonesCategoria.forEach(function(boton) {
     buscador.addEventListener("input", buscarProductos);
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 </body>
 </html>
