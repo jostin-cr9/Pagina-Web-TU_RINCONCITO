@@ -300,11 +300,12 @@
      S/ 1.50 
     </p>
     
-    <button class="btn btn-primary mt-auto"
-    data-bs-toggle="modal"
-        data-bs-target="#modalAgua"> 
-      Ver producto 
-    </button>
+    <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Agua Cielo mineral', 1.50)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
     
   </div>
     </div>    
@@ -323,11 +324,12 @@
     <p class="fw-bold fs-5">
       S/1.00
     </p>
-    <button class="btn btn-primary mt-auto"
-    data-bs-toggle="modal"
-        data-bs-target="#modalGalletas"> 
-      Ver producto 
-    </button>
+    <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Galletas', 1.00)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
   </div>
 </div>
 </div>
@@ -345,11 +347,12 @@
     <p class="fw-bold fs-5">
       S/4.50
     </p>
-    <button class="btn btn-primary mt-auto"
-    data-bs-toggle="modal"
-        data-bs-target="#modalArroz"> 
-      Ver producto 
-    </button>
+   <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Arroz', 4.50)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
   </div>
 </div>
 </div>
@@ -367,11 +370,12 @@
     <p class="fw-bold fs-5">
       S/5.50
     </p>
-    <button class="btn btn-primary mt-auto"
-    data-bs-toggle="modal"
-        data-bs-target="#modalDetergente"> 
-      Ver producto 
-    </button>
+   <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Detergente', 5.50)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
   </div>
 </div>
 </div>
@@ -391,11 +395,12 @@
     <p class="fw-bold fs-5">
       S/4.00
     </p>
-    <button class="btn btn-primary mt-auto"
-    data-bs-toggle="modal"
-        data-bs-target="#modalLeche"> 
-      Ver producto 
-    </button>
+  <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Leche Gloria', 4.00)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
   </div>
 </div>
 </div>
@@ -414,11 +419,12 @@
     <p class="fw-bold fs-5">
       S/2.50
     </p>
-    <button class="btn btn-primary mt-auto"
-    data-bs-toggle="modal"
-        data-bs-target="#modalChocolate"> 
-      Ver producto 
-    </button>
+    <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Chocolates', 2.50)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
   </div>
 </div>
 </div>
@@ -438,11 +444,12 @@
     <p class="fw-bold fs-5">
       S/8.50
     </p>
-    <button class="btn btn-primary mt-auto"
-     data-bs-toggle="modal" 
-        data-bs-target="#modalGaseosa"> 
-      Ver producto 
-    </button>
+    <button type="button"
+        class="btn btn-primary mt-auto"
+        onclick="agregarAlCarrito('Gaseosa', 8.50)">
+    <i class="bi bi-cart-plus me-1"></i>
+    Agregar al carrito
+</button>
   </div>
 </div>
 </div>
@@ -482,7 +489,8 @@
                     S/ 1.50
                 </p>
 
-                <button class="btn btn-primary">
+                <button class="btn btn-primary"
+                onclick="agregarAlCarrito('Agua Cielo mineral',1.50)">
                     Agregar al carrito
                 </button>
 
@@ -540,7 +548,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title fw-bold" id="modalGalletasLabel">
+                <h5 class="modal-title fw-bold" id="modalArrozLabel">
                     Arroz
                 </h5>
 
@@ -1276,47 +1284,48 @@
 </footer>
 
 
-<!--PARA EL CARRITO-->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+<!-- CARRITO -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
+     aria-labelledby="offcanvasCarritoLabel">
+
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Mi Carrito</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+
+    <h5 class="offcanvas-title" id="offcanvasCarritoLabel">
+      <i class="bi bi-cart3 me-2"></i>Mi carrito
+    </h5>
+
+    <button type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Cerrar">
+    </button>
+
   </div>
+
   <div class="offcanvas-body">
-    <div class="list-group">
-      <div class="list-group-item">
-         <div class="d-flex flex-column justify-content-between">
-    <p class="card-text fw-bold fs-5">
-      Agua mineral 
-    </p>
-    <p class="card-text text-secondary"> 
-      Cielo de 625 ml
-    </p>
-    <p class="fw-bold fs-5"> 
-     S/ 1.50 
-    </p>
-    <div class="d-flex align-items-center gap-2">
-      <button class="btn-primary">
-        +
-      </button>
-      <p class="fw-bold mb-0"> 1 </p>
-      <button  class="btn-primary">
-        -
-      </button>
+
+    <div id="carritoVacio" class="alert alert-light border">
+      <i class="bi bi-cart-x me-2"></i>
+      Tu carrito está vacío.
     </div>
+
+    <div id="listaCarrito" class="list-group mb-3"></div>
+
+    <div class="border-top pt-3 d-flex justify-content-between">
+      <span class="fw-bold">Total</span>
+      <span id="totalCarrito" class="fw-bold text-primary">
+        S/ 0.00
+      </span>
     </div>
-      </div>
- </div>
+
+    <button class="btn btn-primary w-100 mt-3"
+            data-bs-toggle="modal"
+            data-bs-target="#modalLoginCliente">
+      Continuar con el pedido
+    </button>
+
   </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -1435,6 +1444,135 @@ botonesCategoria.forEach(function(boton) {
     // Buscar mientras el usuario escribe
     buscador.addEventListener("input", buscarProductos);
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+
+    const productoExistente = carrito.find(
+        producto => producto.nombre === nombre
+    );
+
+    if (productoExistente) {
+
+        productoExistente.cantidad++;
+
+    } else {
+
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+
+    }
+
+    mostrarCarrito();
+}
+
+
+function mostrarCarrito() {
+
+    const lista = document.getElementById("listaCarrito");
+    const carritoVacio = document.getElementById("carritoVacio");
+    const total = document.getElementById("totalCarrito");
+    const badge = document.getElementById("badgeCarrito");
+
+    lista.innerHTML = "";
+
+    let totalCarrito = 0;
+    let cantidadProductos = 0;
+
+
+    carrito.forEach((producto, indice) => {
+
+        totalCarrito += producto.precio * producto.cantidad;
+        cantidadProductos += producto.cantidad;
+
+        const item = document.createElement("div");
+
+        item.className =
+            "list-group-item d-flex justify-content-between align-items-center";
+
+        item.innerHTML = `
+            <div>
+                <strong>${producto.nombre}</strong>
+                <br>
+                <small>
+                    S/ ${producto.precio.toFixed(2)} × ${producto.cantidad}
+                </small>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <button class="btn btn-sm btn-outline-secondary"
+                        onclick="disminuirCantidad(${indice})">
+                    −
+                </button>
+
+                <span>${producto.cantidad}</span>
+
+                <button class="btn btn-sm btn-outline-secondary"
+                        onclick="aumentarCantidad(${indice})">
+                    +
+                </button>
+
+                <button class="btn btn-sm btn-outline-danger"
+                        onclick="eliminarProducto(${indice})">
+                    <i class="bi bi-trash"></i>
+                </button>
+
+            </div>
+        `;
+
+        lista.appendChild(item);
+    });
+
+
+    carritoVacio.style.display =
+        carrito.length === 0 ? "block" : "none";
+
+    total.textContent =
+        "S/ " + totalCarrito.toFixed(2);
+
+    badge.textContent = cantidadProductos;
+}
+
+
+function aumentarCantidad(indice) {
+
+    carrito[indice].cantidad++;
+
+    mostrarCarrito();
+}
+
+
+function disminuirCantidad(indice) {
+
+    if (carrito[indice].cantidad > 1) {
+
+        carrito[indice].cantidad--;
+
+    } else {
+
+        carrito.splice(indice, 1);
+
+    }
+
+    mostrarCarrito();
+}
+
+
+function eliminarProducto(indice) {
+
+    carrito.splice(indice, 1);
+
+    mostrarCarrito();
+}
+
+</script>
 </body>
 </html>
