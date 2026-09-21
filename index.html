@@ -91,7 +91,7 @@
     </div>
   </nav>
 <!-- CARRUSEL -->
-<section class="container my-4">
+<section id="inicio" class="container my-4">
   
   <div id="carouselExampleFade" class="carousel slide carousel-fade shadow-sm rounded-4 overflow-hidden">
 
@@ -147,7 +147,7 @@
 
 </section>    <!--CATEGORIAS-->
     
-    <div class="row g-3">
+    <div id="categorias" class="row g-3">
 
         <div class="col-6 col-md-4 col-lg-2">
             <a href="#productos"
@@ -266,7 +266,7 @@
 </div>
 
    <!-- CATEGORÍAS -->
-     <div class="text-center mb-5">
+     <div  class="text-center mb-5">
         <button class="btn btn-primary m-1 filtro-categoria" 
             data-categoria="todos">Todos        
             </button>
@@ -449,6 +449,7 @@
 
 </div>
 </div>
+</section>
 <!-- MODAL AGUA -->
 <div class="modal fade" id="modalAgua" tabindex="-1" aria-labelledby="modalAguaLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -750,9 +751,8 @@
     </div>
 </div>
 <!-- REGISTRAR USUARIO -->
-<!-- ===================================================== -->
+
 <!-- MODAL INICIAR SESIÓN -->
-<!-- ===================================================== -->
 
 <div class="modal fade" id="modalLoginCliente" tabindex="-1"
      aria-labelledby="modalLoginClienteLabel" aria-hidden="true">
@@ -856,9 +856,7 @@
   </div>
 
 </div>
-<!-- ===================================================== -->
 <!-- MODAL REGISTRAR USUARIO -->
-<!-- ===================================================== -->
 
 <div class="modal fade" id="modalRegistro" tabindex="-1"
      aria-labelledby="modalRegistroLabel" aria-hidden="true">
@@ -1054,10 +1052,13 @@
 
 </div>
 <!--NOSOTROS-->
-    <section class="container py-5">
-  <div class="row g-4">
-
-    <div class="col-md-4">
+    <section id="nosotros" class="container  shadow-sm  mt-5">
+      <!--TITULO-->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold"> ¿?Por qué elegir TU RINCONCITO</h2>
+        </div>
+      <div class="row g-4">
+         <div class="col-md-4">
       <div class="card h-100 border-0 shadow-sm text-center">
         <div class="card-body p-4">
           <i class="bi bi-basket2 display-5 text-primary"></i>
@@ -1149,7 +1150,130 @@
 </section>
 
 
+<!-- CONTACTO -->
+<section id="contacto" class="bg-white border-top py-5">
 
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contacto</h2>
+      <p class="text-secondary">
+        Para consultas e información sobre nuestros productos.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-5">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body p-4">
+
+            <h5 class="fw-bold mb-4">Información de contacto</h5>
+
+            <p>
+              <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+              Jr. Las Flores 123, Lima
+            </p>
+
+            <p>
+              <i class="bi bi-telephone-fill text-primary me-2"></i>
+              +51 987 654 321
+            </p>
+
+            <p>
+              <i class="bi bi-envelope-fill text-primary me-2"></i>
+              contacto@turinconcito.com
+            </p>
+
+            <p class="mb-0">
+              <i class="bi bi-clock-fill text-primary me-2"></i>
+              Lunes a domingo, 7:00 a. m. - 10:00 p. m.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+
+        <form id="formContacto" class="card shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="5" required></textarea>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-send me-2"></i>Enviar mensaje
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-5">
+
+  <div class="container-fluid">
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <h5>Tu Rinconcito</h5>
+        <p class="text-secondary mb-0">
+          Bodega de productos de primera necesidad, alimentos,
+          bebidas y artículos para el hogar.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#inicio" class="text-white text-decoration-none">Inicio</a></li>
+          <li class="mb-2"><a href="#productos" class="text-white text-decoration-none">Productos</a></li>
+          <li class="mb-2"><a href="#promociones" class="text-white text-decoration-none">Promociones</a></li>
+          <li><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Horario</h5>
+        <p class="text-secondary mb-1">Lunes a domingo</p>
+        <p class="text-secondary mb-0">7:00 a. m. - 10:00 p. m.</p>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <p class="text-center text-secondary mb-0">
+      © 2026 Tu Rinconcito. Todos los derechos reservados.
+    </p>
+
+  </div>
+</footer>
 
 
 <!--PARA EL CARRITO-->
