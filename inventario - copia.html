@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventario - TU RINCONCITO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="intranet">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      TU RINCONCITO
+      <small>Intranet de bodega</small>
+    </div>
+    <nav class="nav flex-column">
+      <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a class="nav-link" href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
+      <a class="nav-link active" href="inventario.html"><i class="bi bi-clipboard-data"></i> Inventario</a>
+      <a class="nav-link" href="movimientos.html"><i class="bi bi-arrow-left-right"></i> Entradas y salidas</a>
+      <a class="nav-link" href="ventas.html"><i class="bi bi-receipt"></i> Ventas</a>
+      <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+      <a class="nav-link" href="proveedores.html"><i class="bi bi-truck"></i> Proveedores</a>
+      <a class="nav-link" href="reportes.html"><i class="bi bi-bar-chart"></i> Reportes</a>
+      <a class="nav-link" href="usuarios.html"><i class="bi bi-person-gear"></i> Usuarios</a>
+      <a class="nav-link logout" href="login.html"><i class="bi bi-box-arrow-left"></i> Cerrar sesión</a>
+    </nav>
+  </aside>
+  <div class="overlay-sidebar" id="overlaySidebar"></div>
+
+  <div class="intranet-main">
+    <header class="topbar">
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary d-lg-none" id="btnMenu"><i class="bi bi-list"></i></button>
+        <h1>Inventario</h1>
+      </div>
+      <span class="text-muted small"><i class="bi bi-person-circle"></i> Administrador</span>
+    </header>
+
+    <main class="content">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" id="buscarInventario" class="form-control" placeholder="Buscar por nombre o código">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table mb-0" id="tablaInventario">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Stock actual</th>
+                <th>Stock mínimo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ARR-001</td>
+                <td>Arroz Extra 5 kg</td>
+                <td>Abarrotes</td>
+                <td>45</td>
+                <td>15</td>
+                <td><span class="badge badge-disponible">Disponible</span></td>
+              </tr>
+              <tr>
+                <td>ACE-002</td>
+                <td>Aceite Vegetal 1 L</td>
+                <td>Abarrotes</td>
+                <td>8</td>
+                <td>10</td>
+                <td><span class="badge text-bg-warning">Stock bajo</span></td>
+              </tr>
+              <tr>
+                <td>LEC-003</td>
+                <td>Leche Entera 1 L</td>
+                <td>Lácteos</td>
+                <td>9</td>
+                <td>12</td>
+                <td><span class="badge text-bg-warning">Stock bajo</span></td>
+              </tr>
+              <tr>
+                <td>GAS-004</td>
+                <td>Gaseosa 1.5 L</td>
+                <td>Bebidas</td>
+                <td>50</td>
+                <td>20</td>
+                <td><span class="badge badge-disponible">Disponible</span></td>
+              </tr>
+              <tr>
+                <td>AGU-005</td>
+                <td>Agua de mesa 2.5 L</td>
+                <td>Bebidas</td>
+                <td>80</td>
+                <td>20</td>
+                <td><span class="badge badge-disponible">Disponible</span></td>
+              </tr>
+              <tr>
+                <td>GAL-006</td>
+                <td>Galletas soda pack</td>
+                <td>Snacks</td>
+                <td>5</td>
+                <td>10</td>
+                <td><span class="badge text-bg-warning">Stock bajo</span></td>
+              </tr>
+              <tr>
+                <td>LIM-007</td>
+                <td>Detergente 1 kg</td>
+                <td>Limpieza</td>
+                <td>0</td>
+                <td>8</td>
+                <td><span class="badge text-bg-danger">Agotado</span></td>
+              </tr>
+              <tr>
+                <td>AZU-008</td>
+                <td>Azúcar rubia 1 kg</td>
+                <td>Abarrotes</td>
+                <td>25</td>
+                <td>10</td>
+                <td><span class="badge badge-disponible">Disponible</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
