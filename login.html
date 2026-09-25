@@ -63,5 +63,29 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    // Login de la intranet. Por ahora valida contra una cuenta de prueba
+    // porque todavía no está conectado el backend (Spring Security/JWT).
+    // Cuando esté listo el backend, este bloque se reemplaza por el fetch al endpoint de login.
+    document.getElementById('formLogin').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const usuario = document.getElementById('usuario').value.trim();
+      const clave = document.getElementById('clave').value.trim();
+      const alerta = document.getElementById('loginAlerta');
+
+      const USUARIO_DEMO = 'admin';
+      const CLAVE_DEMO = 'admin123';
+
+      if (usuario === USUARIO_DEMO && clave === CLAVE_DEMO) {
+        sessionStorage.setItem('rinconcitoAuth', 'ok');
+        window.location.href = 'dashboard.html';
+      } else {
+        alerta.textContent = 'Usuario o contraseña incorrectos.';
+        alerta.classList.remove('d-none');
+        alerta.classList.add('alert-danger');
+      }
+    });
+  </script>
 </body>
 </html>
